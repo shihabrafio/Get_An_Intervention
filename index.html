@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Website title -->
+    <title>Spiralyze - Frontend Assessment</title>
+    <!-- Browser Tab icon -->
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/48/mechanical-spring.png" type="image/x-icon">
+    <!-- External Stylesheet -->
+    <link href="./styles.css" rel="stylesheet">
+</title>
+</head>
+<body>
+    <!-- Mobile Navbar -->
+    <div class="topnav">
+        <img src="images/logo.png" class="mob-logo desk-hide">
+        <br>
+        <div id="navigation">
+          <a href="#news">HOME</a>
+          <a href="#contact">ABOUT</a>
+          <a href="#about">CONTACT</a>
+        </div>
+        <a class="icon" onclick="Navbar()">
+          <img src="/images/hamburger.png" alt="Hamburger Menu">
+        </a>
+      </div>
+    <!-- Header with background -->
+    <section class="background-header">
+        <!-- Custom Navbar -->
+        <nav>
+            <div>
+                <img src="images/logo.png" class="logo mob-hide">
+            </div>
+            <ul class="navbar-ul">
+                <li class="active-nav">
+                    <a href="#"><u>HOME</u></a>
+                </li>
+                <li>
+                    <a href="#" class="in-active-nav">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#" class="in-active-nav">CONTACT</a>
+                </li>
+                <li>
+                    <span class="line"> | </span>
+                </li>
+
+                <li class="ipad-nav-adj">
+                    <a href="#"> <span class="call"><strong>CALL NOW FOR A CONSULT</strong></strong></span> &nbsp;<span class=""><strong class="ip"> 123.456.7890</strong></span></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Text Content -->
+        <div>
+            <h1 class="text-get"> <span class="outlined-text">GET AN</span> <br> <span class="intervention">INTERVENTION</span></h1>
+            <p class="text-showing"> Showing greater respect to older adults can be done in several ways : <br class="mob-hide ipad-hide">
+                acknowledging and putting to use the talents and skills of older adults; creating <br class="mob-hide ipad-hide">
+                intergenerational initiatives; and allowing older adults to stay active and independent<br class="mob-hide ipad-hide"> 
+                for as long as possible.</p>
+        </div>
+        <!-- Contact us form -->
+        <div class="form-outline">
+            <div class="form-container">
+                <h1 class="text-contact-us"> Contact Us </h1>
+                <br>
+                <form id="contactUsForm" action="thanks.html" validate>
+                    <div class="flexy">
+                        <div class="input-field">
+                        <input type="text" id="first-name-input" required spellcheck="false" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+                            <label>First Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="last-name-input" required spellcheck="false">
+                            <label>Last Name</label>
+                        </div>
+                    </div>
+                    <div class="flexy">
+                        <div class="input-field">
+                            <input type="text" id="business-email-input" required spellcheck="false">
+                            <label>Business Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="company-input" required spellcheck="false">
+                            <label>Company</label>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <select class="form-select" id="country" aria-label="Default select example">
+                            <option class="select-option" selected>Country</option>
+                            <option class="select-option" value="1">India</option>
+                            <option class="select-option" value="1">Australia</option>
+                            <option class="select-option" value="2">USA</option>
+                            <option class="select-option" value="3">UK</option>
+                            <option class="select-option" value="4">Canada</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button" onclick="validateForm(event)">
+                        <img src="./images/send-icon.png" class="send-icon" alt="Send Icon"/>
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="background-curve"></div>
+    </section>
+    <div id="first-name-popup" class="popup margin-left-adj">
+        <img src="/images/uptriangle.png" alt="Up Arrow" class="abs upArrowFirst">
+        <span class="popup-content">First Name can’t be empty. Please fill</span>
+    </div>
+    <div id="last-name-popup" class="popup margin-left-adj">
+        <img src="/images/uptriangle.png" alt="Up Arrow" class="abs upArrowLast">
+        <span class="popup-content">Last Name can’t be empty. Please fill</span>
+    </div>
+    <div id="business-email-popup" class="popup margin-left-adj">
+        <img src="/images/uptriangle.png" alt="Up Arrow" class="abs upArrowBusiness">
+
+        <span class="popup-content">Business Email can’t be empty. fill</span>
+    </div>
+    <div id="company-popup" class="popup margin-left-adj">
+        <img src="/images/uptriangle.png" alt="Up Arrow" class="abs upArrowCompany">
+        <span class="popup-content">Company can’t be empty. Please fill</span>
+    </div>
+    <div id="country-popup" class="popup margin-left-adj">
+        <img src="/images/downtriangle.png" alt="Up Arrow" class="abs upArrowCountry">
+        <span class="popup-content">Country can’t be empty. Please select a country.</span>
+    </div>
+    <!-- Elder Couple Section -->
+    <section class="elder-people-section">
+        <div>
+            <div class="elder-people mob-hide">
+                <div>
+                    <img src="./images/grandparents.png" class="elderly-imgs" alt="Elderly People">
+                </div>
+                <div>
+                    <img src="./images/eldercouple.png" class="elderly-imgs" alt="Elderly People">
+                </div>
+                <div>
+                    <img src="./images/olderpeoples.png" class="elderly-imgs" alt="Elderly People">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h2 class="we-understand" id="we-understand"><span class="we">WE</span> <span>UNDERSTAND</span></h2>
+                </div>
+                <img src="./images/line.png" alt="Black line" class="line">
+            </div>
+            <div class="flexyStatic">
+                <div class="text-container text-container-1">
+                    <p class="text-elder">
+                        Older adults want to play active and meaningful <br class="mob-hide ipad-hide">roles in their lives, including as part of a social <br class="mob-hide ipad-hide">network, a neighborhood, and a community. Service, <br class="mob-hide ipad-hide">providers and policymakers must consider that a <br class="mob-hide ipad-hide">lack of sense of purpose can become problematic as <br class="mob-hide ipad-hide">people age.  Engaging them in leisure activities and <br class="mob-hide ipad-hide">volunteer work is important.
+                    </p>
+                </div>
+                <div class="text-container text-container-1">
+                    <p class="text-elder">
+                        Older adults want to stay active and contribute to <br class="mob-hide ipad-hide">society in a reciprocal manner (meaning that they <br class="mob-hide ipad-hide">want to exchange their services and skills with <br class="mob-hide ipad-hide">others for the mutual benefit of the neighborhood or <br class="mob-hide ipad-hide">community). Qualitative and quantitative studies <br class="mob-hide ipad-hide">published from 2005 to 2016 examining the social <br class="mob-hide ipad-hide">needs of older adults were eligible for inclusion.
+                    </p>
+                </div>
+                <div class="text-container text-container-3">
+                    <p class="text-elder text-elder-3">
+                        To stimulate social contacts, neighborhood <br class="mob-hide ipad-hide"> initiatives can be developed. Social meeting places, <br class="mob-hide ipad-hide"> such as pubs and churches can help to foster the <br class="mob-hide ipad-hide">development of close and peripheral relationships.
+                        <p></p>
+                    </p>
+                    <button class="button-success"><p class="text-success-rate">92% Success Rate <img src="images/rarrow.svg" alt="Right Arrow" class="green-right-arrow"></p></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <div class="overlay mob-hide"></div>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="slide active">
+                    <div class="testimonial-container">
+                        <div class="testimonial-text">
+                            <img src="/images/quotes.svg" alt="Quotes" class="quotes">
+                            <div class="testimonial-adj">
+                                <h3>Abbie Harvey</h3>
+                                <p>I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love, and care that they truly deserve.</p>
+                            </div>
+                        </div>
+                        <img src="./images/testimonial-1.png" class="testimonial-images" alt="Testimonial 1">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-container">
+                        <div class="testimonial-text">
+                            <img src="/images/quotes.svg" alt="Quotes" class="quotes">
+                            <div class="testimonial-adj">
+                                <h3>Blesslin Jerish R</h3>
+                                <p>I can't express how thankful I am for the support I received from the ElderCare program. Their dedicated staff members went above and beyond to ensure my comfort and well-being. I feel truly blessed to have found such a caring community."</p>
+                            </div>
+                        </div>
+                        <img src="./images/testimonial-2.png" class="testimonial-images" alt="Testimonial 1">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-container">
+                        <div class="testimonial-text">
+                            <img src="/images/quotes.svg" alt="Quotes" class="quotes">
+                        <div class="testimonial-adj">
+                            <h3>Gia Caballero</h3>
+                            <p>I was initially hesitant about joining a senior activity group. However, participating in the Golden Years Club has been an absolute It's heartwarming to connect with individuals who share similar experiences and create new friendships.</p>
+                        </div>
+                        </div>
+                        <img src="./images/testimonial-3.png" class="testimonial-images" alt="Testimonial 1">
+                </div>
+            </div>
+            <div class="button-container mob-hide">
+                <button class="button-change prev" onclick="changeSlide(-1)">
+                    <div class="arrow arrow-image arrow-left"></div>
+                </button>
+                <button class="next" onclick="changeSlide(1)">
+                    <div class="arrow arrow-image arrow-right"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <div class="carousel-dots">
+        <button class="dot" onclick="currentDot(0)"></button>
+        <button class="dot" onclick="currentDot(1)"></button>
+        <button class="dot" onclick="currentDot(2)"></button>
+    </div>
+    <!-- Organize everything Section -->
+    <section class="organize-everything-section">
+        <div class="org">
+            <div class="imp-adj">
+                <h2 class="we-understand we-organise" id="we-organise"><span class="we">WE</span> <span>CAN ORGAINZE EVERYTHING</span></h2>
+            </div>
+            <div class="flexy-inter imp-adj-2">
+                <div class="text-interventions">
+                    <p><span class="bolder">Interventions</span>  should focus on older <br class="mob-hide ipad-hide">adult’s desire for connectedness, <br class="mob-hide ipad-hide">participation and independence.</p>
+                    <br><br>
+                </div>
+                <div class="inter-two">
+                    <div class="text-intervention-two"><p>Loneliness and social isolation are growing public <br class="mob-hide">health concerns in our aging society. Whilst these <br class="mob-hide">experiences occur across the life span, 50% of <br class="mob-hide">individuals aged over 60 are at risk of social isolation <br class="mob-hide">and one-third will experience some degree of <br class="mob-hide">loneliness later in life. It is vital to reduce loneliness <br class="mob-hide">and social isolation among older adults.</p></div>
+                    <div class="text-intervention-two"><p>The methodology framework proposed by Asked <br class="mob-hide">and O’Malley and further developed by Levac, et al. <br class="mob-hide">was used to guide the scoping review process. A <br class="mob-hide">total of 33 reviews met the inclusion criteria, <br class="mob-hide">evaluating a range of interventions targeted at older <br class="mob-hide">people residing in the community or <br class="mob-hide">  institutionalised settings. </p></div>
+                </div>
+            </div>
+            <div class="imp-hide">
+                <div class="flexy-inter">
+                    <div class="green-box bolder green-box-1">Needs Assessment
+                        <div class="info"><img src="/images/info.svg" alt="Info"></div>
+                    </div>
+                    <div class="tool-tip tool-tip-1">
+                        <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+                    </div>
+                    <div class="green-box bolder green-box-2">Treatment Planning &<br>Placement
+                        <div class="info"><img src="/images/info.svg" alt="Info"></div>
+                    </div>
+                    <div class="tool-tip tool-tip-2">
+                        <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+                    </div>
+                    <div class="green-box bolder green-box-3">Transportation & Logistics
+                        <div class="info"><img src="/images/info.svg" alt="Info"></div>
+                    </div>
+                    <div class="tool-tip tool-tip-3">
+                        <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+                    </div>
+                </div>
+                <div class="flexy-inter green-adj">
+                    <div class="green-box bolder green-box-1">Insurance Advocacy<div class="info"><img src="/images/info.svg" alt="Info"></div></div>
+                    <div class="tool-tip tool-tip-1">
+                        <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+                    </div>
+                    <div class="green-box bolder green-box-2">Employment Advocacy<div class="info"><img src="/images/info.svg" alt="Info"></div></div>
+                    <div class="tool-tip tool-tip-2">
+                        <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+                    </div>
+                    <div class="green-box bolder green-box-3">Aftercare Planning<div class="info"><img src="/images/info.svg" alt="Info"></div></div>
+                    <div class="tool-tip tool-tip-3">
+                        <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+                    </div>
+                </div>   
+            </div>
+<div class="imp-hide-others">
+    <div class="flexy-inter">
+        <div class="ipad-flexy">
+            <div class="green-box bolder green-box-1">Needs Assessment
+                <div class="info"><img src="/images/info.svg" alt="Info"></div>
+            </div>
+            <div class="tool-tip tool-tip-1">
+                <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+            </div>
+            <div class="green-box bolder green-box-2">Treatment Planning &<br>Placement
+                <div class="info"><img src="/images/info.svg" alt="Info"></div>
+            </div>
+            <div class="tool-tip tool-tip-2">
+                <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <div class="green-box bolder green-box-3 green-boxy">Transportation & Logistics
+            <div class="info"><img src="/images/info.svg" alt="Info"></div>
+        </div>
+        <div class="tool-tip tool-tip-3">
+            <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+        </div>
+    </div>
+    <div class="flexy-inter green-adj">
+        <div class="green-box bolder green-box-1 green-box-4">Insurance Advocacy<div class="info"><img src="/images/info.svg" alt="Info"></div></div>
+        <div class="tool-tip tool-tip-1 tool-tip-4">
+            <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+        </div>
+        <div class="ipad-flexy">
+            <div class="green-box bolder green-box-2 green-box-5">Employment Advocacy<div class="info"><img src="/images/info.svg" alt="Info"></div></div>
+            <div class="tool-tip tool-tip-2 tool-tip-5">
+                <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+            </div>
+            <div class="green-box bolder green-box-3 green-box-6">Aftercare Planning<div class="info"><img src="/images/info.svg" alt="Info"></div></div>
+            <div class="tool-tip tool-tip-3 tool-tip-6">
+                <p>We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically. <img src="/images/green-up-triangle.png" alt="Green Triangle" class="green-triangle"> </p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="bg-people">
+            <div class="watch">
+                <h2 class="watch-the-video"><span class="we vid">WATCH</span><span> THE <br class="desk-hide">VIDEO</span></h2>
+            </div>
+            <img src="./images/play-icon.svg" alt="Play Button" class="play" id="playButton">
+            <div class="text-video">
+                <div class="white-color container-adj">
+                    <h1><img src="images/checkmark.png" alt="checkmark"> &nbsp; Needs Assessment</h1>
+                    <p>The Advocacy Evaluation Toolkit contains the <br class="mob-hide ipad-hide">instruments used to collect data for evaluating <br class="mob-hide ipad-hide">the Consumer Voices for Coverage program. </p>
+                </div>
+                <div class="white-color container-adj">
+                    <h1><img src="images/checkmark.png" alt="checkmark"> &nbsp; Insurance Advocacy</h1>
+                    <p>We are committed to advocating for <br class="mob-hide ipad-hide">appropriate coverage and payment policies.</p>
+                </div>
+                <div class="white-color container-adj">
+                    <h1><img src="images/checkmark.png" alt="checkmark"> &nbsp; Treatment Planning & <span class="place"> Placement</span></h1>
+                    <p>Patients can better understand medical<br class="mob-hide ipad-hide">procedures, discharge instructions, etc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="video-popup" id="videoPopup">
+        <h1 class="video-title"><span class="mob-hide">World of Christopher </span> Nolan.</h1>
+        <video controls id="videoPlayer">
+            <source src="video/4kNolan.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="closeButton" class="material-close">Close</button>
+    </div>
+    <footer>
+        <div>
+            <div class="footer-section">
+                <div class="copyright">
+                    <span class="policy"> @<span class="year"></span> Get an Intervention Inc. All rights reserved. </span>
+                </div>
+                <div>
+                    <div class="privacy">
+                        <a href="#" class="policy">Privacy Policy </a>
+                        <span> | </span>
+                        <a href="#" class="policy">Terms of Use </a>
+                        <span> | </span>
+                        <a href="#" class="policy">Site Map </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- External Vanilla JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
