@@ -479,7 +479,7 @@ input:valid ~ label {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   margin-top: -17rem;
-  margin-left: 12rem;
+  margin-left: 24rem;
   height: 17rem;
 }
 
@@ -513,7 +513,7 @@ input:valid ~ label {
 
 .testimonial-text {
   position: relative;
-  margin-left: 29rem;
+  margin-left: 41rem;
   background-color: #194d44;
   color: #ffffff;
   width: 35rem;
